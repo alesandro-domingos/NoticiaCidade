@@ -1,0 +1,278 @@
+/*css Noticia Cidade*/
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	background: #fff url(./imagens/fundo.png) repeat-x;
+}
+
+#container{
+	width:750px;
+	margin: 0 auto; /*dessa maneira centraliza a div*/
+}
+
+#topo{
+	height: 150px;
+	background: url(./imagens/detalhe-topo.png) no-repeat right top;
+	padding-top:25px;
+}
+
+.logo{
+	width:152px;
+	height:66px;
+	background: url(./imagens/logo.png) no-repeat center;
+	text-indent: -3000px;
+}
+
+/** formatando barra de navegacao **/
+
+ul{   /*usar essa formatacao para todas as ul do site*/
+	margin:0;
+	padding:0;
+	list-style:none;	
+}
+
+/* essa formatacao será apenas para os ul de dentro da div topo ( navegacao principal do site ) */
+#topo ul { 
+	margin-top: 30px;
+	background: #b10333;
+	float: left;/*colocar os itens do menu lado a lado, deve ser colocado aqui na ul e na ul li*/
+			
+}
+
+ /*formatacao para os li da ul que esta na div topo*/
+#topo ul li{
+	float:left; /*colocar os itens de menu lado a lado, deve ser colocado aqui na ul li e na ul*/
+			/*para que a li funcione o float a ul configurada tambem tem que flutuar*/
+}
+
+/*formatando os links da ul li */
+#topo ul a{
+	font-size: 0.9em;
+	display: block;
+	padding: 0.5em 1.5em;
+	line-height:2.1em;
+	text-decoration:none;
+	color:#fff;
+	background: url(./imagens/divisor.png) no-repeat left center;
+}
+/*tirando a imagem de divisor dos menu do primeiro item , colocar essa classe no primento link(home)*/
+#topo ul li.primeiro a{
+	background:none;
+}
+
+#topo ul a:hover{
+	color:#69001d;
+}
+
+/*configurando para deixar o menu marcado ao ser clicado*/
+/*colocando uma class no body e um id em cada link de pagina*/
+/*class do body / id ul de navegacao / id cada link */
+/*para cada pagina colocar a class do body mantendo id#navegacao e trocando o id de cada link*/ 
+body.home #navegacao a#home, 
+body.brasil #navegacao a#brasil,
+body.internacional #navegacao a#internacional,
+body.economia #navegacao a#economia,
+body.saude #navegacao a#saude,
+body.ciencias #navegacao a#ciencias,
+body.fotos #navegacao a#fotos
+ {
+	color:#fff;
+	background: #de003e;
+	cursor: text;
+}
+
+/*Configuracao Conteudo (Colunas)*/
+
+#conteudo{
+		margin-top: 60px;/*enpurra a div mais pra baixo em relacao a div do menu*/
+		background: #f5f5f5;
+	}
+/*Observando que a largura total é de 750px*/
+#primario {
+		width:270px;
+		float: left;
+		margin: 0 0 20px 195px;
+			}
+
+#duas-colunas #primario {
+		width:555px;
+			}
+#uma-colunas #primario {
+		width:750px;
+		margin: 0 0 20px 0px;
+			}
+#secundario {
+		width:270px;
+		float: left;
+		margin: 0 0 20px 15px;
+	}
+#lateral {
+		width:180px;
+		float: left;
+		margin: 0 0 20px -750px; 
+	}
+/*somando primario 270 + secundario 270 + lateral 180 = 720px */
+/*sobrando 30px, será a largura entre as colunas, duas larguras de 15 cada*/
+
+/*Fim Configuracao Conteudo*/
+
+/*Inicio Conf Caixa*/
+
+.caixa {
+		margin: 10px 0;
+		paddgin: 5px; 
+		background: #f3f3f3 url(./imagens/fundo-caixa.png);
+	}
+h2{
+		font-size:1em;
+		background: #294c71;
+		color: #fff;
+		padding: 5px;
+}
+.caixa-conteudo{
+		background: #fff;
+		padding: 5px;
+		margin-top: 5px;
+}
+
+/*Fim Config caixa*/
+
+/*Formatando links (a) */
+
+a:link, a:visited {
+		color: #b10333;
+		padding: 2px;
+}
+a:hover{
+		color: #e50040;
+}
+
+/*Fim Formatando links (a)*/
+
+
+/*INICIO links Lateral*/
+
+#lateral ul a{
+		font-size:0.9em;
+		padding: 3px;
+		display:block;
+		line-height: 30px;
+		color:#000;
+		text-decoration:none;
+		border-bottom: 1px solid #f3f3f3;
+		
+	}
+#lateral ul a:hover{
+		background: #f9f9f9 url(./imagens/marcador.png) no-repeat left center;
+		color: #a1a1a1;
+		padding-left: 20px;
+	}
+
+/*FIM Links lateral*/
+
+/*INICIO Formulario(NEWS)*/
+
+label{
+	display:block;
+	cursor:pointer;
+	}
+input{
+	padding: 5px;
+	width:125px;
+	font-size:0.9em;
+	background:#fff;
+}
+input.submit{
+	width:80px;
+	color:#fff;
+	background-color:#b10333;
+	border: 2px solid #870529;
+}
+/*FIM Formulario (NEWS)*/
+
+/*Inicio Formatcao Imagens*/
+/*Foi definido um tamanho pra imagem direto na tag img dando um width de 100%*/
+/*dessa maneira a imagem ainda terá seu tamanho original, mas sendo exibida menor*/
+/*sendo que o ideal é reduzir o tamanho da imagem em um editor pra que a pagina não fique pesada*/
+
+/*img { } - poderia usar esse modo para configurar todas as img do site */
+
+img.imagem-principal {     /*ou dando uma classe a img para dar uma configuracao especifica*/
+		
+		border: 3px solid #dfdfdf;
+		width: 98%;
+} 
+
+/*Fim Formatacao Imagens*/
+
+/*formatando cabeçalhos das Imagens*/
+
+h3{
+	text-transform: uppercase; /*deixa maiusculo*/
+	display: inline;
+	font-size: 0.8em;
+	padding: 3px;
+}
+/*usando essa maneira .destaque h3 , defino uma formatacao nessa classe e posso por exemplo*/
+/*colocar essa classe em uma div , fazendo que todo h3 dessa div teje essa configuracao*/
+/*podendo até como nesse exemplo usar duas classes num mesmo parametro (ver no index.html)*/
+
+.destaque h3 {
+		background: #b10333;
+		color: #fff;
+}
+.entrevista h3 {
+		background: #de003e;
+		color: #fff;
+}
+/*Fim Cabeçalhos Imgs*/
+
+/*Formatando li  da lista de noticias (MUNDO)*/
+
+#lista-noticias li {
+
+		padding: 2px;
+		border-bottom: 1px solid #ccc;
+		height: 62px;
+}
+
+#lista-noticias li a img {  /*formata a img que está no link (a) que esta na li que está na ul lista-noticias*/
+		float: left;
+		margin: 5px;
+}
+#lista-noticias li a {
+		text-decoration: none;
+}
+#lista-noticias li a h3 {
+		font-size: 0.8em;
+		padding: 0; /*Zera apenas do h3*/
+		color: #3e7ab9;
+}
+#lista-noticias li a p {
+		font-size: 0.7em;
+}
+#lista-noticias li:hover{
+		background: #eee;
+		cursor: pointer;
+}
+/*Formatando li  da lista de noticias (MUNDO)*/
+
+
+/*Inicio ROdape*/
+
+#container-rodape{
+			background: #294c71;
+			padding: 20px;
+	}
+#rodape{
+			width:750px;
+			margin:0 auto;
+			color:#fff;
+	}
+
+/*Fim Rodape*/
